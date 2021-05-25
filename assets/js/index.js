@@ -45,6 +45,10 @@ function montaProjeto() {
 
 let numeroId = 1
 
+if(localStorage.length > 0) {
+    numeroId = localStorage.length
+}
+
 function atribuiId() {
     if(localStorage.length == 0) {
         return 0

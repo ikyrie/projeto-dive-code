@@ -13,15 +13,10 @@
 <body spellcheck="false">
     <main class="main">
         <h1 class="titulo">Todos os projetos</h1>
-        <a href="#" class="projeto-wrapper">
-            <article class="projeto">
-                <code class="projeto__codigo hljs javascript">function teste() {}</code>
-                <h2 class="projeto__titulo">Título do projeto</h2>
-                <p class="projeto__descricao">Uma breve descrição do que é o projeto</p>
-                <span class="projeto__linguagem linguagem--javascript">javascript</span>
-            </article>
-        </a>
+        <ul class="todos-projetos js-todos-projetos">
+        </ul>
     </main>
+    <script src="/assets/js/comunidade.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
     <script>
         const todosOsCodigos = document.querySelectorAll('code')

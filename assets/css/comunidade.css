@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    padding: 0;
 }
 
 a {
@@ -30,9 +31,15 @@ a {
     margin-bottom: 32px;
 }
 
-.projeto-wrapper {
+.todos-projetos {
     width: 100%;
     max-width: 600px;
+}
+
+.projeto-wrapper {
+    display: block;
+    width: 100%;
+    margin-bottom: 32px;
 }
 
 .projeto {
