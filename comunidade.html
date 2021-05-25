@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/darcula.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+<body spellcheck="false">
+    <main class="main">
+        <a href="comunidade.html" class="link-projetos">Ver todos os projetos</a>
+        <section class="cartao">
+            <label for="titulo-projeto" class="label">Título do projeto</label>
+            <input type="text" id="titulo-projeto" class="input js-titulo-projeto" placeholder="Meu projeto">
+            <label for="descricao-projeto" class="label">Descrição do projeto</label>
+            <input type="text" id="descricao-projeto" class="input js-descricao-projeto" placeholder="Minha descrição">
+            <label for="linguagem" class="label">Escolha a linguagem</label>
+            <select name="linguagem" id="linguagem" class="input js-linguagem">
+                <option value="javascript">JavaScript</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+            </select>
+            <div class="codigo-wrapper js-codigo-wrapper">
+                <code class="preview hljs" contenteditable="true" aria-label="editor"></code>
+            </div>
+            <div class="botoes-wrapper">
+                <button class="botao js-botao-preview">preview</button>
+                <button class="botao js-botao-salvar">salvar</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script src="/assets/js/index.js"></script>
+</body>
+</html>
