@@ -32,7 +32,7 @@ botaoSalvar.addEventListener('click', () => {
 
 function montaProjeto() {
     let projeto = {
-        'id': 0,
+        'id': atribuiId(),
         'detalhesDoProjeto': {
             'nomeDoProjeto': tituloProjeto.value,
             'descricaoDoProjeto': descricaoProjeto.value,
@@ -41,6 +41,20 @@ function montaProjeto() {
         }
     }
     return projeto
+}
+
+let numeroId = 1
+
+function atribuiId() {
+    if(localStorage.length == 0) {
+        return 0
+    } else {
+        if(localStorage.length == numeroId) {
+            let novoId = numeroId
+            numeroId++
+            return novoId
+        }
+    }
 }
 
 function salvaLocalStorage(objetoJson) {
