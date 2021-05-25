@@ -13,6 +13,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     width: 100vw;
     min-height: 100vh;
@@ -24,11 +25,14 @@ a {
 }
 
 .link-projetos {
+    width: 100%;
+    max-width: 600px;
     font-size: 2rem;
     margin-bottom: 16px;
     background-color: #ffffff;
     padding: 10px;
     border-radius: 10px;
+    box-sizing: border-box;
 }
 
 .link-projetos:hover {
