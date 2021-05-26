@@ -13,12 +13,9 @@ function mostraProjetos() {
         projetos.push(JSON.parse(localStorage.getItem(i)))
     }
     projetos.forEach(projeto => {
-        console.log(projeto)
         const cartao = criaCartao(projeto)
         listaProjetos.innerHTML += cartao
         const codigoHtml = listaProjetos.querySelector(`[data-id="${projeto.id}"]`)
-        console.log(codigoHtml.querySelector('code'))
-        console.log(codigoHtml)
         codigoHtml.querySelector('.js-projeto__codigo').innerText = projeto.detalhesDoProjeto.codigo
     })
 }
