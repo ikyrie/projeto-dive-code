@@ -16,7 +16,7 @@ function mostraProjetos() {
         const cartao = criaCartao(projeto)
         listaProjetos.innerHTML += cartao
         const codigoHtml = listaProjetos.querySelector(`[data-id="${projeto.id}"]`)
-        codigoHtml.querySelector('.js-projeto__codigo').innerText = projeto.detalhesDoProjeto.codigo
+        codigoHtml.querySelector('code').innerText = projeto.detalhesDoProjeto.codigo
     })
 }
 
@@ -24,7 +24,7 @@ function criaCartao(projeto) {
     const cartao = `
         <a href="index.html" class="projeto-wrapper" data-id="${projeto.id}">
             <article class="projeto">
-                <code class="projeto__codigo js-projeto__codigo hljs ${projeto.detalhesDoProjeto.linguagem}"></code>
+                <code class="projeto__codigo hljs ${projeto.detalhesDoProjeto.linguagem}"></code>
                 <h2 class="projeto__titulo">${projeto.detalhesDoProjeto.nomeDoProjeto}</h2>
                 <p class="projeto__descricao">${projeto.detalhesDoProjeto.descricaoDoProjeto}</p>
                 <span class="projeto__linguagem linguagem--${projeto.detalhesDoProjeto.linguagem}">${projeto.detalhesDoProjeto.linguagem}</span>
