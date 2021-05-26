@@ -57,7 +57,6 @@ a {
     width: 100%;
     max-width: 600px;
     min-height: 800px;
-    height: 800px;
 
     padding: 10px;
 
@@ -103,19 +102,17 @@ a {
 }
 
 .codigo-wrapper {
-    height: 100%;
-
+    min-height: 400px;
     margin-bottom: 32px;
 }
 
-.preview {
+code.preview {
+    min-height: inherit;
     display: block;
-
     padding: 10px;
-
     border-radius: 7px;
-
     height: 100%;
+    white-space: pre-wrap;
 }
 
 .botoes-wrapper {

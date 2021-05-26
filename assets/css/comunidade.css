@@ -54,6 +54,7 @@ code.projeto__codigo {
     display: block;
     padding: 16px 10px;
     margin-bottom: 16px;
+    white-space: pre-wrap;
 }
 
 .projeto__titulo, .projeto__descricao, .projeto__linguagem {

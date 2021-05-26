@@ -13,20 +13,21 @@ function mostraProjetos() {
         projetos.push(JSON.parse(localStorage.getItem(i)))
     }
     projetos.forEach(projeto => {
-        let cartao = criaCartao(projeto)
+        console.log(projeto)
+        const cartao = criaCartao(projeto)
         listaProjetos.innerHTML += cartao
-        if(projeto.detalhesDoProjeto.linguagem === 'html') {
-            let codigoHtml = listaProjetos.querySelector(`[data-id="${projeto.id}"]`)
-            codigoHtml.querySelector('code').innerText = projeto.detalhesDoProjeto.codigo
-        }
+        const codigoHtml = listaProjetos.querySelector(`[data-id="${projeto.id}"]`)
+        console.log(codigoHtml.querySelector('code'))
+        console.log(codigoHtml)
+        codigoHtml.querySelector('.js-projeto__codigo').innerText = projeto.detalhesDoProjeto.codigo
     })
 }
 
 function criaCartao(projeto) {
-    let cartao = `
+    const cartao = `
         <a href="index.html" class="projeto-wrapper" data-id="${projeto.id}">
             <article class="projeto">
-                <code class="projeto__codigo hljs ${projeto.detalhesDoProjeto.linguagem}">${projeto.detalhesDoProjeto.codigo}</code>
+                <code class="projeto__codigo js-projeto__codigo hljs ${projeto.detalhesDoProjeto.linguagem}"></code>
                 <h2 class="projeto__titulo">${projeto.detalhesDoProjeto.nomeDoProjeto}</h2>
                 <p class="projeto__descricao">${projeto.detalhesDoProjeto.descricaoDoProjeto}</p>
                 <span class="projeto__linguagem linguagem--${projeto.detalhesDoProjeto.linguagem}">${projeto.detalhesDoProjeto.linguagem}</span>

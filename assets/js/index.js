@@ -15,9 +15,9 @@ linguagem.addEventListener('change', () => {
 })
 
 function mudaLinguagem() {
-    let codigo = areaDoCodigo.querySelector('code')
+    let codigo = {'texto': areaDoCodigo.querySelector('code').innerText}
     areaDoCodigo.innerHTML = `<code class="preview hljs ${linguagem.value}" contenteditable="true" aria-label="editor"></code>`
-    areaDoCodigo.firstChild.innerText = codigo.innerText
+    areaDoCodigo.firstChild.innerText = codigo.texto
 }
 
 botaoSalvar.addEventListener('click', () => {
